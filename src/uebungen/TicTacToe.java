@@ -1,9 +1,7 @@
 package uebungen;
 
 public class TicTacToe {
-    enum State {EMPTY, RED, BLACK}
-
-    ;
+    enum State {EMPTY, RED, BLACK} ;
 
     State[][] field;
 
