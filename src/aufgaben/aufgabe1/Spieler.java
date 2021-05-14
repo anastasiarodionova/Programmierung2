@@ -1,9 +1,5 @@
 package aufgaben.aufgabe1;
-
-import aufgaben.aufgabe1.Spiel;
-
 import java.util.Random;
-
 import javax.swing.JOptionPane;
 
 public class Spieler {
