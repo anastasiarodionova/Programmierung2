@@ -50,27 +50,27 @@ public class SetOperations {
                     System.out.print(" " + '\u2009');
                 }
             }
-        }
-        System.out.println("          ");
-
-        for (int i = 0; i < 10; i++) {
-            if (this.numbers2.contains(Integer.valueOf(b++))) {
-                System.out.print(" " + '\u25cf');
-            } else {
-                System.out.print(" " + '\u222a');
-            }
-        }
-        System.out.print("          ");
-
-
-        for (int j = 0; j < 10; j++) {
-            if (this.both.contains(Integer.valueOf(c++))) {
-                System.out.print(" " + '\u25cf');
-            } else {
-                System.out.print(" " + '\u2229');
-            }
             System.out.print("          ");
 
+            for (i = 0; i < 10; i++) {
+                if (this.numbers2.contains(Integer.valueOf(b++))) {
+                    System.out.print(" " + '\u25cf');
+                } else {
+                    System.out.print(" " + '\u222a');
+                }
+                System.out.print("          ");
+            }
+            System.out.println();
+
+            for (int j = 0; j < 10; j++) {
+                if (this.both.contains(Integer.valueOf(c++))) {
+                    System.out.print(" " + '\u25cf');
+                } else {
+                    System.out.print(" " + '\u2229');
+                }
+                System.out.print("          ");
+            }
+            System.out.println();
         }
     }
 
@@ -83,10 +83,10 @@ public class SetOperations {
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
         setOp1.fill();
         setOp1.fillBothUnion();
+        setOp1.fillBothIntersection();
+        setOp1.fillBothDifference();
         setOp1.print();
         System.out.println();
-        System.out.println();
-
 
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("          A                                           B                                                                   A\u2229B");
@@ -94,7 +94,6 @@ public class SetOperations {
         setOp2.fill();
         setOp2.fillBothUnion();
         setOp2.print();
-        System.out.println();
         System.out.println();
 
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
