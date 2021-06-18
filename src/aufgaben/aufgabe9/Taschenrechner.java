@@ -1,4 +1,4 @@
-package aufgaben.aufgabe8;
+package aufgaben.aufgabe9;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

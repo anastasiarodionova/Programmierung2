@@ -1,25 +1,14 @@
-package aufgaben.aufgabe9;
+package aufgaben.aufgabe8;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-public class Taschenrechner extends JFrame implements ActionListener {
+public class Taschenrechner extends JFrame {
 
     JTextField display;
     JPanel panel;
-    double a;
-    double b;
-    double result;
-    String operation;
 
     public Taschenrechner() {
         super("Taschenrechner");
@@ -58,25 +47,6 @@ public class Taschenrechner extends JFrame implements ActionListener {
         JButton bPunkt = new JButton(".");
         JButton bGleich = new JButton("=");
         JButton bClear = new JButton("clear");
-        b1.addActionListener(this);
-        b2.addActionListener(this);
-        b3.addActionListener(this);
-        b4.addActionListener(this);
-        b5.addActionListener(this);
-        b6.addActionListener(this);
-        b7.addActionListener(this);
-        b8.addActionListener(this);
-        b9.addActionListener(this);
-        bKlammerAuf.addActionListener(this);
-        b0.addActionListener(this);
-        bKlammerZu.addActionListener(this);
-        bMal.addActionListener(this);
-        bGeteilt.addActionListener(this);
-        bPlus.addActionListener(this);
-        bMinus.addActionListener(this);
-        bPunkt.addActionListener(this);
-        bGleich.addActionListener(this);
-        bClear.addActionListener(this);
         b1.setPreferredSize(new Dimension(80, 40));
         keyPanel.add(b1);
         keyPanel.add(b2);
@@ -99,121 +69,6 @@ public class Taschenrechner extends JFrame implements ActionListener {
         keyPanel.add(bClear);
 
         return keyPanel;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        Object source = e.getSource();
-        if (source instanceof JButton) {
-            JButton key = (JButton) source;
-            String s = key.getText();
-            switch (s) {
-                case "1": {
-                    this.display.setText(this.display.getText() + "1");
-                    break;
-                }
-                case "2": {
-                    this.display.setText(this.display.getText() + "2");
-                    break;
-                }
-                case "3": {
-                    this.display.setText(this.display.getText() + "3");
-                    break;
-                }
-                case "4": {
-                    this.display.setText(this.display.getText() + "4");
-                    break;
-                }
-                case "5": {
-                    this.display.setText(this.display.getText() + "5");
-                    break;
-                }
-                case "6": {
-                    this.display.setText(this.display.getText() + "6");
-                    break;
-                }
-                case "7": {
-                    this.display.setText(this.display.getText() + "7");
-                    break;
-                }
-                case "8": {
-                    this.display.setText(this.display.getText() + "8");
-                    break;
-                }
-                case "9": {
-                    this.display.setText(this.display.getText() + "9");
-                    break;
-                }
-                case "(": {
-                    this.display.setText(this.display.getText() + "(");
-                    break;
-                }
-                case "0": {
-                    this.display.setText(this.display.getText() + "0");
-                    break;
-                }
-                case ")": {
-                    this.display.setText(this.display.getText() + ")");
-                    break;
-                }
-                case "*": {
-                    this.a = Integer.valueOf(this.display.getText());
-                    this.operation = "*";
-                    this.display.setText("");
-                    break;
-                }
-                case "/": {
-                    this.a = Integer.valueOf(this.display.getText());
-                    this.operation = "/";
-                    this.display.setText("");
-                    break;
-                }
-                case "+": {
-                    this.a = Integer.valueOf(this.display.getText());
-                    this.operation = "+";
-                    this.display.setText("");
-                    break;
-                }
-                case "-": {
-                    this.a = Integer.valueOf(this.display.getText());
-                    this.operation = "+";
-                    this.display.setText("");
-                    break;
-                }
-                case ".": {
-                    this.display.setText(this.display.getText() + ".");
-                    break;
-                }
-                case "=": {
-                    this.b = Integer.valueOf(this.display.getText());
-                    switch (this.operation) {
-                        case "*": {
-                            this.result = this.a * this.b;
-                            break;
-                        }
-                        case "/": {
-                            this.result = this.a / this.b;
-                            break;
-                        }
-                        case "+": {
-                            this.result = this.a + this.b;
-                            break;
-                        }
-                        case "-": {
-                            this.result = this.a - this.b;
-                            break;
-                        }
-                    }
-                    this.display.setText(String.valueOf(this.result));
-                    break;
-                }
-                case "clear": {
-                    this.display.setText("");
-                    break;
-                }
-            }
-        }
-
     }
 
     public static void main(String[] args) {
